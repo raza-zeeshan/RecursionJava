@@ -7,7 +7,7 @@ public class StrongRecursion {
 		System.out.println("Enter the number : ");
 		int n=new Scanner(System.in).nextInt();
 		int factorial=fact(n);
-		System.out.print(n+ " is an strong number : "+strong(n,n,factorial));
+		System.out.print(n+ " is an strong number : "+strong(n,n,fact(n%10)));
 		
 
 	}
@@ -16,10 +16,10 @@ public class StrongRecursion {
 		return n*fact(n-1);
 		
 	}
-	public static boolean strong(int n,int num,int fact) {
-		if(n==0) return fact==num;
+	public static boolean strong(int n,int num,int fa) {
+		if(n==0) return fact(n)==num;
 		
-		return strong(n/10,num,fact);
+		return strong(n/10,num,fact(n));
 		
 	}
 
