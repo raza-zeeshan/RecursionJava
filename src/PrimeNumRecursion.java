@@ -6,7 +6,10 @@ public class PrimeNumRecursion {
 		// TODO Auto-generated method stub
 		
 		
-		range(0,100);
+		System.out.println("enter the number : ");
+		int n = new Scanner(System.in).nextInt();
+	
+		System.out.println(n+" is prime number : "+primeNum(n,n/2));
 		
 
 	}
